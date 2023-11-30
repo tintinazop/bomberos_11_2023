@@ -1,0 +1,18 @@
+.bg-image {
+    background-image: url('../img/bg1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.form-container,
+.item-list-container {
+    background: rgba(255, 255, 255, 0.478); /* Transparent background */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 2);
+    margin-top: 20px;
+}
+
+.form-container {
+    margin-right: 1px;
+}
