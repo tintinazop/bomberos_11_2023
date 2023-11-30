@@ -1,0 +1,29 @@
+{% extends 'ordinal/header.html' %}
+{% block content %}
+{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/signup.css' %}">
+    <section class="register_body">
+        <div class="wrapper">
+            <form method="post">
+                {% csrf_token %}
+                <h1>Registro <img src="{% static 'img/CompLogo.webp' %}" width="60" alt="logo"></h1>
+                <div class="input-box">
+                    <div class="input-field">
+                        <input type="text" name="username" placeholder="Nombre de Usuario" required>
+                        <i class='bx bxs-user'></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" name="password1" placeholder="Contraseña" required>
+                        <i class='bx bxs-lock-alt'></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" name="password2" placeholder="Confirmar Contraseña" required>
+                        <i class='bx bxs-lock-alt'></i>
+                    </div>
+                </div>
+                <label><input type="checkbox">Por la presente declaro que la información anterior proporcionada es verdadera y correcta.</label>
+                <button type="submit" class="btn" value="Registrarse">Registrarse</button>
+            </form>
+        </div>
+    </section>
+{% endblock content %}

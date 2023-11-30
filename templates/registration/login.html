@@ -1,0 +1,31 @@
+{% extends 'ordinal/header.html' %}
+{% block content %}
+{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+    <section class="login_body">
+        <div class="wrapper">
+            <form method="post">
+                {% csrf_token %}
+                <h1>Inicia Sesión <img src="{% static 'img/CompLogo.webp' %}" width="60" alt="logo"></h1>
+                <div class="input-box">
+                    <input type="text" name="username" placeholder="Nombre de usuario" required>
+                    <i class='bx bxs-envelope'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="password" placeholder="Contraseña" required>
+                    <i class='bx bxs-lock-alt' ></i>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Recordar</label>
+                    <a href="#">¿Has olvidado tu contraseña?</a>
+                </div>
+                
+                <button type="submit" class="btn" value="Log In">Iniciar Sesión</button>
+                
+                <div class="register-link">
+                    <p>¿No tienes una cuenta? <a href="{% url 'signup' %}">Regístrate</a></p>
+                </div>
+            </form>
+        </div>
+    </section>
+{% endblock content %}
